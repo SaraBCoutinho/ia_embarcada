@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Projeto IAM",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-s3-devkitc-1", "id": "esp", "top": 0, "left": 0, "attrs": {
+      "serialInterface": "USB_SERIAL_JTAG"} },
+    { "type": "wokwi-mpu6050", "id": "mpu1", "top": 100, "left": 100, "attrs": {
+      "accelX": "0.35",
+      "accelY": "-0.20",
+      "accelZ": "0.92",
+      "rotationX": "12",
+      "rotationY": "-8",
+      "rotationZ": "25"
+    } }
+  ],
+  "connections": [
+    [ "esp:GND.1", "mpu1:GND", "black", [ "v0" ] ],
+    [ "esp:3V3", "mpu1:VCC", "red", [ "v0" ] ],
+    [ "esp:4", "mpu1:SDA", "green", [ "v0" ] ],
+    [ "esp:5", "mpu1:SCL", "blue", [ "v0" ] ]
+  ]
+}

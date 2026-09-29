@@ -1,0 +1,28 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.extensionActivationMode": "always",
+  "idf.espIdfPath": "${env:USERPROFILE}/esp/esp-idf",
+  "idf.toolsPath": "${env:USERPROFILE}/.espressif",
+  "idf.pythonBinPath": "${env:USERPROFILE}/.espressif/python_env/idf5.4_py3.12_env/Scripts/python.exe",
+  "idf.adapterTargetName": "esp32",
+  "idf.flashType": "UART",
+  "cmake.configureOnOpen": false,
+  "cmake.configureOnEdit": false,
+  "cmake.automaticReconfigure": false,
+  "cmake.autoSelectActiveFolder": false,
+  "cmake.options.advanced": {
+    "build": {
+      "statusBarVisibility": "inherit",
+      "inheritDefault": "hidden"
+    },
+    "launch": {
+      "statusBarVisibility": "inherit",
+      "inheritDefault": "hidden"
+    },
+    "debug": {
+      "statusBarVisibility": "inherit",
+      "inheritDefault": "hidden"
+    }
+  },
+  "git.ignoreLimitWarning": true
+}
