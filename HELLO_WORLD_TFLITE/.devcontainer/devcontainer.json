@@ -1,0 +1,12 @@
+{
+  "name": "HELLO_WORLD_TFLITE",
+  "image": "espressif/idf:release-v5.4",
+  "workspaceFolder": "/workspaces/HELLO_WORLD_TFLITE",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "espressif.esp-idf-extension"
+      ]
+    }
+  }
+}

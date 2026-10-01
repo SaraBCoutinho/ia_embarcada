@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "build/HELLO_WORLD_TFLITE.bin"
+elf = "build/HELLO_WORLD_TFLITE.elf"

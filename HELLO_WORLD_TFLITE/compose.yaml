@@ -1,0 +1,7 @@
+services:
+  esp-idf:
+    image: espressif/idf:release-v5.4
+    working_dir: /project
+    volumes:
+      - .:/project
+    entrypoint: ["idf.py"]
