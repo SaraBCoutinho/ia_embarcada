@@ -28,6 +28,8 @@ static esp_err_t i2c_master_init(void) {
 }
 
 void app_main(void) {
+    ESP_LOGI(TAG, "Hello World!");
+
     ESP_ERROR_CHECK(i2c_master_init());
     ESP_LOGI(TAG, "Barramento I2C inicializado.");
 

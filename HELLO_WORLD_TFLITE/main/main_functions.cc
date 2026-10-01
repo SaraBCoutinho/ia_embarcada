@@ -33,7 +33,7 @@ TfLiteTensor* output = nullptr;
 int inference_count = 0;
 bool is_initialized = false;
 
-constexpr int kTensorArenaSize = 2000;
+constexpr int kTensorArenaSize = 4096;
 uint8_t tensor_arena[kTensorArenaSize];
 }  // namespace
 
@@ -60,9 +60,21 @@ void setup() {
   }
 
   // Pull in only the operation implementations we need.
-  static tflite::MicroMutableOpResolver<1> resolver;
+  static tflite::MicroMutableOpResolver<4> resolver;
   if (resolver.AddFullyConnected() != kTfLiteOk) {
     MicroPrintf("Failed to register FullyConnected operator");
+    return;
+  }
+  if (resolver.AddRelu() != kTfLiteOk) {
+    MicroPrintf("Failed to register Relu operator");
+    return;
+  }
+  if (resolver.AddDequantize() != kTfLiteOk) {
+    MicroPrintf("Failed to register Dequantize operator");
+    return;
+  }
+  if (resolver.AddQuantize() != kTfLiteOk) {
+    MicroPrintf("Failed to register Quantize operator");
     return;
   }
 
